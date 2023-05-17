@@ -13,6 +13,9 @@ class _Detail_pageState extends State<Detail_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("This is my first flutter app"),
+      ),
       body: Center(
         child: Text("Pdp Online 2 Page"),
       ),

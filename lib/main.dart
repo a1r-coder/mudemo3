@@ -4,6 +4,7 @@ import 'package:mudemo3/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const HomePage(),
+      debugShowCheckedModeBanner: false,
       routes: {
         HomePage.id: (context) => HomePage(),
         Detail_page.id: (context) => Detail_page(),
