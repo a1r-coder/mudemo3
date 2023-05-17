@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mudemo3/pages/home_page.dart';
-import 'package:mudemo3/pages/next_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,10 +16,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const Next_page(),
+      home: const HomePage(),
       routes: {
         HomePage.id: (context) => HomePage(),
-        Next_page.id: (context) => Next_page(),
       },
     );
   }
