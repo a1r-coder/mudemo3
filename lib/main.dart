@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mudemo3/pages/detail_page.dart';
 import 'package:mudemo3/pages/home_page.dart';
 
 void main() {
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       home: const HomePage(),
       routes: {
         HomePage.id: (context) => HomePage(),
+        Detail_page.id: (context) => Detail_page(),
       },
     );
   }

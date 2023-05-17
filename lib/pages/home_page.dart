@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mudemo3/pages/detail_page.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -14,7 +15,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("PDP Online 11211"),
+        child: TextButton(
+            child: Text('press it'),
+            onPressed: () {
+              Navigator.pushNamed(context, Detail_page.id);
+            },
+        ),
       ),
     );
   }
