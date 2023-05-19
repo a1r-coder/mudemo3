@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         HomePage.id: (context) => HomePage(),
-        Detail_page.id: (context) => Detail_page(),
+        Detail_page.id: (context) => Detail_page(input: "",a: 0,),
       },
     );
   }
