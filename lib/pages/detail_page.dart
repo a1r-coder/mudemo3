@@ -4,7 +4,7 @@ class Detail_page extends StatefulWidget {
   static final String id = "detail_page";
 
   final String input;
-  int a = 0;
+  final int a;
   Detail_page({required this.input, required this.a});
 
   @override
@@ -20,15 +20,14 @@ class _Detail_pageState extends State<Detail_page> {
       ),
       body: Center(
         child: TextButton(
-          child: Text(widget.input),
-          onPressed: (){
-            Navigator.of(context).pop({"data":"The Best"});
+          child: Text("${widget.input}, ${widget.a.toString()}"),
+          onPressed: () {
+            Navigator.of(context).pop({"data": "Dart","son":33});
           },
           style: TextButton.styleFrom(
             backgroundColor: Colors.black12,
           ),
         ),
-
       ),
     );
   }

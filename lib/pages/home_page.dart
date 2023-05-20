@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String data = "";
+  int son = 0;
   Future _openDetails() async{
     Map result = await Navigator.of(context).push(MaterialPageRoute(
         builder: (BuildContext context){
@@ -19,10 +20,11 @@ class _HomePageState extends State<HomePage> {
         }
     ));
 
-    if(result != null && result.containsKey('data')){
+    if(result != null && result.containsKey('data') && result.containsKey("son")){
       //print(result["data"]);
       setState(() {
         data = result["data"];
+        son = result["son"];
       });
     }else{
       print("Nothing");
@@ -36,7 +38,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: TextButton(
-            child: Text(data),
+            child: Text("${data}, ${son.toString()}"),
             onPressed: () {
               //Navigator.pushReplacementNamed(context, Detail_page.id);
               _openDetails();
